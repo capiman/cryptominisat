@@ -166,6 +166,7 @@ before_build:
   # - IF "%IMAGE%" == "Visual Studio 2015" ( SET CMAKE_GENERATOR="Visual Studio 14 2015 Win64")
   - echo %PLATFORM%
   - echo %CMAKE_GENERATOR%
+  - echo %BOOST_VERSION%
   - echo %configuration%
 
   # get "lit" from python pip
