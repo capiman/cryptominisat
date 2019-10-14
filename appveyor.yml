@@ -198,9 +198,7 @@ before_build:
   - mkdir build
   - mkdir myinstall
   - cd build
-  - if %CMAKE_GENERATOR%=="Visual Studio 14 2015 Win64" call cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=%ZLIB_ROOT% ..
-  - if %CMAKE_GENERATOR%=="Visual Studio 15 2017 Win64" call cmake -G "Visual Studio 15 2017 Win64" -DCMAKE_INSTALL_PREFIX=%ZLIB_ROOT% ..  
-  - if %CMAKE_GENERATOR%=="Visual Studio 16 2019 Win64" call cmake -G "Visual Studio 16 2019 Win64" -DCMAKE_INSTALL_PREFIX=%ZLIB_ROOT% ..
+  - cmake -G "%CMAKE_GENERATOR%" -DCMAKE_INSTALL_PREFIX=%ZLIB_ROOT% ..
   - if %PLATFORM%==x64 call msbuild %MSBUILD_FLAGS% /t:Build /p:Configuration=%CONFIGURATION% /p:Platform="x64" zlib.sln
   - msbuild %MSBUILD_FLAGS% INSTALL.vcxproj
 
