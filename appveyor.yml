@@ -36,6 +36,7 @@ environment:
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -46,6 +47,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -57,6 +59,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -68,6 +71,7 @@ environment:
     #STATICCOMPILE_SETTING: OFF
     #EXTRA_FLAGS:
     #BOOST_VERSION: 1.69.0
+    #BOOST_VERSION_UNDERLINE: 1_69_0
     #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-14.0
     #BOOST_OPTIONS: link=shared runtime-link=shared
@@ -79,6 +83,7 @@ environment:
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -89,6 +94,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -100,6 +106,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.69.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -111,6 +118,7 @@ environment:
     #STATICCOMPILE_SETTING: OFF
     #EXTRA_FLAGS:
     #BOOST_VERSION: 1.69.0
+    #BOOST_VERSION_UNDERLINE: 1_69_0
     #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-15.0
     #BOOST_OPTIONS: link=shared runtime-link=shared
@@ -122,6 +130,7 @@ environment:
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
     BOOST_VERSION: 1.71.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -132,6 +141,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.71.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -143,6 +153,7 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_VERSION: 1.71.0
+    BOOST_VERSION_UNDERLINE: 1_69_0
     BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
@@ -153,6 +164,7 @@ environment:
     #DYNAMIC_COMPILE_SETTING: ON
     #STATICCOMPILE_SETTING: OFF
     #BOOST_VERSION: 1.71.0
+    #BOOST_VERSION_UNDERLINE: 1_69_0
     #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-16.0
     #EXTRA_FLAGS:
@@ -181,9 +193,9 @@ before_build:
   # boost
   - cd c:\projects\cryptominisat
   - mkdir boost_install
-  - ps: (new-object net.webclient).DownloadFile('https://dl.bintray.com/boostorg/release/%BOOST_VERSION%/source/boost_%BOOST_VERSION%.zip', 'C:\projects\cryptominisat\boost.zip')
+  # - ps: (new-object net.webclient).DownloadFile('https://dl.bintray.com/boostorg/release/%BOOST_VERSION%/source/boost_%BOOST_VERSION%.zip', 'C:\projects\cryptominisat\boost.zip')
   - ps: . .\scripts\appveyor.ps1
-  - cd boost
+  - cd boost_1_59_0
   - echo "Building boost.."
   - bootstrap.bat --with-libraries=program_options
   - cat project-config.jam
