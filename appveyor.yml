@@ -35,32 +35,66 @@ environment:
     # https://stackoverflow.com/questions/1023858/how-to-suppress-specific-msbuild-warning
     MSBUILD_FLAGS: /maxcpucount /nologo /property:WarningLevel=1
 
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
-
   matrix:
   
   # Normal
-  - DYNAMIC_COMPILE_SETTING: OFF
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
     BOOST_OPTIONS: link=static runtime-link=static
 
   # Largemem
-  - DYNAMIC_COMPILE_SETTING: OFF
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DLARGEMEM=ON
 
   # Gauss
-  - DYNAMIC_COMPILE_SETTING: OFF
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DUSE_GAUSS=ON
 
-  #- DYNAMIC_COMPILE_SETTING: ON
+  #- APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    #CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
+    #DYNAMIC_COMPILE_SETTING: ON
+    #STATICCOMPILE_SETTING: OFF
+    #EXTRA_FLAGS:
+    #BOOST_OPTIONS: link=shared runtime-link=shared
+
+  # Normal
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
+    STATICCOMPILE_SETTING: ON
+    EXTRA_FLAGS:
+    BOOST_OPTIONS: link=static runtime-link=static
+
+  # Largemem
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
+    STATICCOMPILE_SETTING: ON
+    BOOST_OPTIONS: link=static runtime-link=static
+    EXTRA_FLAGS: -DLARGEMEM=ON
+
+  # Gauss
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+    DYNAMIC_COMPILE_SETTING: OFF
+    STATICCOMPILE_SETTING: ON
+    BOOST_OPTIONS: link=static runtime-link=static
+    EXTRA_FLAGS: -DUSE_GAUSS=ON
+
+  #- APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    #CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+    #DYNAMIC_COMPILE_SETTING: ON
     #STATICCOMPILE_SETTING: OFF
     #EXTRA_FLAGS:
     #BOOST_OPTIONS: link=shared runtime-link=shared
