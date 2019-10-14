@@ -7,4 +7,7 @@ function Unzip
     [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
 }
 
-Unzip "C:\projects\cryptominisat\boost.zip" "C:\projects\cryptominisat"
+$wc = New-Object System.Net.WebClient
+$wc.DownloadFile("http://bit.ly/1JPHkL3", "C:\projects\cryptominisat\boost_1_59_0.zip")
+
+Unzip "C:\projects\cryptominisat\boost_1_59_0.zip" "C:\projects\cryptominisat"
