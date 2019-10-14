@@ -35,6 +35,11 @@ environment:
     # https://stackoverflow.com/questions/1023858/how-to-suppress-specific-msbuild-warning
     MSBUILD_FLAGS: /maxcpucount /nologo /property:WarningLevel=1
   matrix:
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
+  
   # Normal
   - DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
@@ -62,8 +67,8 @@ configuration:
   - Release
 
 before_build:
-  - IF "%IMAGE%" == "Visual Studio 2017" ( SET CMAKE_GENERATOR="Visual Studio 15 2017 Win64")
-  - IF "%IMAGE%" == "Visual Studio 2015" ( SET CMAKE_GENERATOR="Visual Studio 14 2015 Win64")
+  # - IF "%IMAGE%" == "Visual Studio 2017" ( SET CMAKE_GENERATOR="Visual Studio 15 2017 Win64")
+  # - IF "%IMAGE%" == "Visual Studio 2015" ( SET CMAKE_GENERATOR="Visual Studio 14 2015 Win64")
   - echo %PLATFORM%
   - echo %CMAKE_GENERATOR%
   - echo %configuration%
