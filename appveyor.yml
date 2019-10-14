@@ -35,8 +35,8 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
-    BOOST_VERSION: 1_59_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.59.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
 
@@ -45,8 +45,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_59_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.59.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DLARGEMEM=ON
@@ -56,8 +56,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 14 2015 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_59_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.59.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-14.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DUSE_GAUSS=ON
@@ -67,8 +67,8 @@ environment:
     #DYNAMIC_COMPILE_SETTING: ON
     #STATICCOMPILE_SETTING: OFF
     #EXTRA_FLAGS:
-    #BOOST_VERSION: 1_59_0
-    #BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    #BOOST_VERSION: 1.59.0
+    #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-14.0
     #BOOST_OPTIONS: link=shared runtime-link=shared
 
@@ -78,8 +78,8 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
-    BOOST_VERSION: 1_69_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.69.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
 
@@ -88,8 +88,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_69_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.69.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DLARGEMEM=ON
@@ -99,8 +99,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 15 2017 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_69_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.69.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-15.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DUSE_GAUSS=ON
@@ -110,8 +110,8 @@ environment:
     #DYNAMIC_COMPILE_SETTING: ON
     #STATICCOMPILE_SETTING: OFF
     #EXTRA_FLAGS:
-    #BOOST_VERSION: 1_69_0
-    #BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    #BOOST_VERSION: 1.69.0
+    #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-15.0
     #BOOST_OPTIONS: link=shared runtime-link=shared
 
@@ -121,8 +121,8 @@ environment:
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
     EXTRA_FLAGS:
-    BOOST_VERSION: 1_71_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.71.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
 
@@ -131,8 +131,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 16 2019 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_71_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.71.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DLARGEMEM=ON
@@ -142,8 +142,8 @@ environment:
     CMAKE_GENERATOR: "Visual Studio 16 2019 Win64"
     DYNAMIC_COMPILE_SETTING: OFF
     STATICCOMPILE_SETTING: ON
-    BOOST_VERSION: 1_71_0
-    BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    BOOST_VERSION: 1.71.0
+    BOOST_ROOT: C:\projects\cryptominisat\boost_install
     BOOST_TOOLSET: msvc-16.0
     BOOST_OPTIONS: link=static runtime-link=static
     EXTRA_FLAGS: -DUSE_GAUSS=ON
@@ -152,8 +152,8 @@ environment:
     #CMAKE_GENERATOR: "Visual Studio 16 2019 Win64"
     #DYNAMIC_COMPILE_SETTING: ON
     #STATICCOMPILE_SETTING: OFF
-    #BOOST_VERSION: 1_71_0
-    #BOOST_ROOT: C:\projects\cryptominisat\boost_%BOOST_VERSION%_install
+    #BOOST_VERSION: 1.71.0
+    #BOOST_ROOT: C:\projects\cryptominisat\boost_install
     #BOOST_TOOLSET: msvc-16.0
     #EXTRA_FLAGS:
     #BOOST_OPTIONS: link=shared runtime-link=shared
@@ -179,9 +179,9 @@ before_build:
 
   # boost
   - cd c:\projects\cryptominisat
-  - mkdir boost_%BOOST_VERSION%_install
+  - mkdir boost_install
   - ps: . .\scripts\appveyor.ps1
-  - cd boost_%BOOST_VERSION%
+  - cd boost
   - echo "Building boost.."
   - bootstrap.bat --with-libraries=program_options
   - cat project-config.jam
