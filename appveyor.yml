@@ -195,7 +195,7 @@ before_build:
   - mkdir boost_install
   # - ps: (new-object net.webclient).DownloadFile('https://dl.bintray.com/boostorg/release/%BOOST_VERSION%/source/boost_%BOOST_VERSION%.zip', 'C:\projects\cryptominisat\boost.zip')
   - ps: . .\scripts\appveyor.ps1
-  - cd boost_1_59_0
+  - cd boost_1_71_0
   - echo "Building boost.."
   - bootstrap.bat --with-libraries=program_options
   - cat project-config.jam
