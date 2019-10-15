@@ -426,7 +426,7 @@ MESSAGE(STATUS "PROJECT_VERSION_PATCH: ${PROJECT_VERSION_PATCH}")
 
 option(ONLY_SIMPLE "Only build very simplistic executable -- no Boost needed" OFF)
 if (NOT ONLY_SIMPLE)
-    find_package( Boost 1.46 COMPONENTS program_options)
+    find_package( Boost 1.46.0 COMPONENTS program_options)
 endif()
 
 option(STATS "Don't use statistics at all" OFF)
